@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="tete">
+        <nav>
+            <a href="index.html"> Accueil</a>
+            <a href="Apropos.html"> A Propos</a>
+            <a href="service.html">Mes Services</a>
+            <a href="projet.html">Mes projets</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+        <div>
+        <nav id="torre">
+            <h1>Me contacter !! </h1>
+            <h3> Je suis SUKU ILANGA Torres</h3>
+            <p>Programmeur, concepteur des applications & site Web</p>
+        </nav>
+            
+        <div>
+            <form method="post" id="sendMessageForm">
+                <fieldset>
+                    <legend> Me contacter</legend>
+
+                <div class="formulairecotacte">
+                    <div class="cotacter"> <input type="text" id="name" placeholder="Entrez votre nom" autofocus></div>
+                    <div class="cotacter"> <input type="text" id="pname" placeholder="Entrez votre post_nom"></div>
+                    <div class="cotacter"> <input type="text" id="prename" placeholder="Entrez votre prenom"></div>
+                </div>
+
+                <div class="formulairecotacte"> 
+                    <div class="cotacter"> <input type="email" id="email" placeholder="Entrez votre Email"></div>
+                    <div class="cotacter"> <textarea name="message" id="message" placeholder="Ecrire un message"></textarea></div>
+                    <div class="cotacter"> <button id="submitMessage"> Envoyer</button></div>
+                </div>
+
+                </fieldset>
+            </form>
+
+
+
+            <nav class="corps">
+                <div class="mocorps"><img src="photo/projet.png" alt="mon projet" class="apropos" ></div>
+                <div class="mocorps"><img src="photo/Wlangage.jpg" alt="Wlangage" class="apropos" ></div>
+                <div class="mocorps"><img src="photo/ui.png" alt="autre projet"class="apropos"></div>
+            </nav>
+    
+        </div>
+   
+
+            
+        <footer>
+            <div>
+                <p class="centre"> </p>
+                
+                <div class="bloc"> 
+                <div><p class="intero"> Interrogation  WEB1 <br> Année academique 2025 _ 2026</p></div>
+    
+                <img src="photo/appl.jpg" alt="appel" class="pied"> 
+                    <span> +243 818 553 990 </span>
+                <img src="photo/wat.jpg" alt="Watsapp" class="pied"> 
+                    <span> +243 818 553 990 </span> 
+                <img src="photo/mail.png" alt="Email" class="pied">
+                   <span>  torresilanga41@gmail.com </span>
+            </div>
+        </div>
+        </footer>
+
+
+        
+        <script>
+            document.getElementById("submitMessage").addEventListener("click", async(e)=>{
+                e.preventDefault();
+
+                let nom = document.getElementById("name").value;
+                let pnom = document.getElementById("pname").value;
+                let prenom = document.getElementById("prename").value;
+                let email = document.getElementById("email").value;
+                let message = document.getElementById("message").value;
+
+                console.log(nom);
+
+                if (nom==="" || pnom==="" || prenom==="" || email==="" || message==="") {
+                    alert("Veuillez remplir tous les champs avant d'envoyer le message")
+                    return;
+                }
+
+                alert("Message envoyé avec succès")
+
+                document.getElementById("sendMessageForm").reset()
+
+               
+            })
+        </script>
+</body>
+</html>
